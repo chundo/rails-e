@@ -33,6 +33,12 @@ gem 'jbuilder', '~> 2.5'
 #Para Autentificación
 gem 'devise'
 
+#HAML para mejorar el html
+#gem 'haml-rails'
+
+#Gema de bootstrap
+gem 'bootstrap-sass'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

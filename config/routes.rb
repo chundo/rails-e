@@ -1,6 +1,13 @@
 Rails.application.routes.draw do
   devise_for :users
-  root 'home#index'
+  authenticated :user do
+    root 'home#index'
+  end
 
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  unauthenticated :user do
+    devise_scope :user do
+      root 'home#unregistered', as: :unregistered_root
+    end
+  end
+
 end

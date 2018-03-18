@@ -27,7 +27,7 @@
 	<![endif]-->
     
     <%= csrf_meta_tags %>
-    <% stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <% javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
 	<!-- Document Title
@@ -42,12 +42,9 @@
 	============================================= -->
 	<div id="wrapper" class="clearfix">
 
-        <div style='<%= "display:node;" if alert.nil? && notice.nil? %>'>
-            <%= notice %>
-            <%= alert %>
-        </div>    
-
-        <%= yield %>
+		<%= render "layouts/render/header" %>  
+		<%= yield %>
+		<%= render "layouts/render/footer" %>
 		
 	</div><!-- #wrapper end -->
 

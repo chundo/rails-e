@@ -9,9 +9,22 @@
   </head>
 
   <body>
-    
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+
+  <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img class="d-block w-100" src="https://storage.googleapis.com/material-design/publish/material_v_12/assets/0Bx4BSt6jniD7c0R4RUtiTkhMZTQ/materialdesign-goals-system.png" alt="First slide">
+      </div>
+    </div>
+  </div>
+
+
+   
+    <div style='<%= "display:node;" if alert.nil? && notice.nil? %>'>
+      <%= notice %>
+      <%= alert %>
+    </div>    
+
     <%= yield %>
     
   </body>

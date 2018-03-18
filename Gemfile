@@ -39,6 +39,9 @@ gem 'devise'
 #Gema de bootstrap
 gem 'bootstrap-sass'
 
+#Gema de material design para bootstap
+gem 'bootstrap-material-design'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

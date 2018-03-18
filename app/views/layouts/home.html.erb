@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="SemiColonWeb" />
+
+	<!-- Stylesheets
+	============================================= -->
+	<link href="http://fonts.googleapis.com/css?family=Quicksand:300,400,500,700|Chewy" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="/css/bootstrap.css" type="text/css" />
+	<link rel="stylesheet" href="/style.css" type="text/css" />
+	<link rel="stylesheet" href="/css/dark.css" type="text/css" />
+
+	<!-- Pet Demo Specific Stylesheet -->
+	<link rel="stylesheet" href="/pet/pet.css" type="text/css" />
+	<link rel="stylesheet" href="/pet/css/fonts.css" type="text/css" />
+
+	<link rel="stylesheet" href="/css/font-icons.css" type="text/css" />
+	<link rel="stylesheet" href="/css/animate.css" type="text/css" />
+	<link rel="stylesheet" href="/css/magnific-popup.css" type="text/css" />
+
+	<link rel="stylesheet" href="/css/responsive.css" type="text/css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<!--[if lt IE 9]>
+		<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+	<![endif]-->
+    
+    <%= csrf_meta_tags %>
+    <% stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <% javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+	<!-- Document Title
+	============================================= -->
+	<title>Pet | Canvas</title>
+
+</head>
+
+<body class="stretched">
+
+	<!-- Document Wrapper
+	============================================= -->
+	<div id="wrapper" class="clearfix">
+
+        <div style='<%= "display:node;" if alert.nil? && notice.nil? %>'>
+            <%= notice %>
+            <%= alert %>
+        </div>    
+
+        <%= yield %>
+		
+	</div><!-- #wrapper end -->
+
+	<!-- Go To Top
+	============================================= -->
+	<div id="gotoTop" class="icon-angle-up"></div>
+
+	<!-- External JavaScripts
+	============================================= -->
+	<script src="js/jquery.js"></script>
+	<script src="js/plugins.js"></script>
+
+	<!-- Footer Scripts
+	============================================= -->
+	<script src="js/functions.js"></script>
+
+</body>
+</html>

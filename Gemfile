@@ -42,6 +42,16 @@ gem 'bootstrap-sass'
 #Gema de material design para bootstap
 gem 'bootstrap-material-design'
 
+#Gema para subir imagenes
+gem 'paperclip'
+gem 'carrierwave'
+gem 'mini_magick'
+
+#Paypal para pagos
+gem 'paypal-sdk-rest'
+
+
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

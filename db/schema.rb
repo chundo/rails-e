@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180318235155) do
+ActiveRecord::Schema.define(version: 20180319210539) do
+
+  create_table "archives", force: :cascade do |t|
+    t.string "archive"
+    t.integer "product_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["product_id"], name: "index_archives_on_product_id"
+  end
 
   create_table "my_emails", force: :cascade do |t|
     t.string "email"
@@ -18,6 +26,22 @@ ActiveRecord::Schema.define(version: 20180318235155) do
     t.integer "state"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "products", force: :cascade do |t|
+    t.string "name"
+    t.decimal "pricing", precision: 10, scale: 2
+    t.text "description"
+    t.integer "user_id"
+    t.string "avatar_file_name"
+    t.string "avatar_content_type"
+    t.integer "avatar_file_size"
+    t.datetime "avatar_updated_at"
+    t.string "imagen"
+    t.boolean "state"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_products_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|

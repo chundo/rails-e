@@ -1,0 +1,28 @@
+<!-- form_with(model: archive, local: true) do |form| -->
+<%= form_for @archive do |form| %>
+  <% if @archive.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@archive.errors.count, "error") %> prohibited this archive from being saved:</h2>
+
+      <ul>
+      <% @archive.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :archive %>
+    <%= form.file_field :archive, id: :archive_archive %>
+  </div>
+
+  <div class="field">
+    <%= form.label :product %>
+    <%= form.hidden_field  :product_id, value: @product.id, id: :archive_product_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

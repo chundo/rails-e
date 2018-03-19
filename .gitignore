@@ -24,3 +24,8 @@
 
 /config/environments/*.*
 /config/environments/*.*
+/images/*
+
+#Paypal
+/config/paypal.yml
+/config/paypal.*

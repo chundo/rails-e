@@ -13,8 +13,13 @@
 				<a href="#" class="button nobg noshadow"><i class="icon-gift" style="width: 40px; font-size: 40px; top: 10px;"></i></a>
 				<br><em><small style="opacity: 0.4;">Every month a surprise gift*</small></em>
 
-			</div>
-
+            </div>
+                                
+            <%= form_tag('/', :class => 'col-4', method: :post, remote: true, id: "emails-form") do %>
+                <%= email_field_tag :email, nil, :class => 'form-control form-control-lg not-dark required email', :placeholder => "Enter your email address" %>                   
+                <%= submit_tag('Subscribe', :class => 'button t400') %>
+            <% end %>
+            
 		</div>
 	</div>
 </section>

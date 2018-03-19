@@ -1,7 +1,7 @@
-class HomeController < ApplicationController
+class HomeController < ApplicationController    
+  protect_from_forgery with: :null_session, only: 'suscription'
+
   def index
-    
-    
   end
   
   def unregistered
@@ -17,4 +17,5 @@ class HomeController < ApplicationController
       end
     end
   end
+
 end

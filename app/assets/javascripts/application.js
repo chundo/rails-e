@@ -11,6 +11,7 @@
 // about supported directives.
 //
 //= jQuery
+//= jQuery-ujs
 //= require rails-ujs
 //= require turbolinks
 //= require bootstrap

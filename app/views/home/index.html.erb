@@ -15,7 +15,7 @@
 
             </div>
                                 
-            <%= form_tag('/', :class => 'col-4', method: :post, remote: true, id: "emails-form") do %>
+            <%= form_tag('/', :class => 'col-4', method: :post, remote: true) do %>
                 <%= email_field_tag :email, nil, :class => 'form-control form-control-lg not-dark required email', :placeholder => "Enter your email address" %>                   
                 <%= submit_tag('Subscribe', :class => 'button t400') %>
             <% end %>

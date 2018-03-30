@@ -29,3 +29,5 @@
 #Paypal
 /config/paypal.yml
 /config/paypal.*
+paypal.rb
+.paypal.rb

@@ -25,10 +25,12 @@ class ProductsController < ApplicationController
   # GET /products/new
   def new
     @product = Product.new
+    @archive = Archive.new
   end
 
   # GET /products/1/edit
   def edit
+    @archive = Archive.new
   end
 
   # POST /products

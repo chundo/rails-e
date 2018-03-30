@@ -50,6 +50,9 @@ gem 'mini_magick'
 #Paypal para pagos
 gem 'paypal-sdk-rest'
 
+#Informaicon de los modelos
+gem 'annotate'
+
 
 
 # Use Capistrano for deployment

@@ -20,9 +20,26 @@
             <nav id="primary-menu" class="not-dark">
 
                 <ul>
-                    <li><a href="#"><div>About us</div></a></li>
-                    <li><a href="#"><div>Community</div></a></li>
-                    <li><a href="#"><div>FAQs</div></a></li>
+                    <li>
+                        <%= link_to carrito_path do %>
+                            <div>Home</div>
+                        <% end %>
+                    </li>
+                    <li>
+                        <%= link_to carrito_path do %>
+                            <div>Carrito (<%= @shopping_cart.in_shopping_carts.size %>)</div>
+                        <% end %>
+                    </li>
+                    <li>
+                        <%= link_to carrito_path do %>
+                            <div>Ordenes</div>
+                        <% end %>
+                    </li>
+                    <li>
+                        <%= link_to carrito_path do %>
+                            <div>Descuentos</div>
+                        <% end %>
+                    </li>
                     <li class="bgcolor"><a href="#"><div>Register</div></a></li>
                 </ul>
 

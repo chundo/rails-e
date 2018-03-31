@@ -1,0 +1,10 @@
+<% @shopping_cart.in_shopping_carts.each do |producto| %>
+    <%= producto.product.name  %> <%= producto.product.pricing  %> 
+    <%= link_to "eliminar", in_shopping_cart_path(producto), method: :delete %> <br>
+<% end %>
+
+Total: <%= @shopping_cart.total %>
+<%= render 'payments/buttons'%>
+
+
+<%= @payment.to_json %>

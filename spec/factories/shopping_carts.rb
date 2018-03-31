@@ -1,17 +1,17 @@
 # == Schema Information
 #
-# Table name: my_payments
+# Table name: shopping_carts
 #
 #  id         :integer          not null, primary key
-#  email      :string
+#  status     :boolean
 #  ip         :string
-#  status     :string
-#  fee        :decimal(6, 2)
-#  paypal_id  :string
-#  total      :decimal(6, 2)
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
 
-class MyPayment < ApplicationRecord
+FactoryBot.define do
+  factory :shopping_cart do
+    status false
+    ip "MyString"
+  end
 end

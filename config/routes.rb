@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  #get 'payments/create'
+
+  #get 'shopping_carts/show'
+
   resources :archives#, only: [:crate, :destroy, :new]
   resources :products
   devise_for :users
@@ -14,4 +18,10 @@ Rails.application.routes.draw do
   end
   
   post '' => 'home#suscription'
+
+  resources :in_shopping_carts, only: [:create, :destroy]
+  get '/carrito' => 'shopping_carts#show'
+  get '/carrito/:id' => 'shopping_carts#show', as: 'estado'
+  post '/pagar' => 'payments#create'
+  get '/payment/execute' => 'payments#execute'
 end

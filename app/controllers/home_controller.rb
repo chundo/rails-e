@@ -18,4 +18,7 @@ class HomeController < ApplicationController
     end
   end
 
+  def carrito
+  end
+
 end

@@ -23,4 +23,7 @@ class Product < ApplicationRecord
   validates :pricing, numericality: {greater_than: 0}
   mount_uploader :imagen, ImageUploader
   has_many :archives  
+
+  has_many :in_shopping_carts
+  has_one :shopping_cart, through: :in_shopping_carts
 end

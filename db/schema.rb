@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180320001533) do
+ActiveRecord::Schema.define(version: 20180330234221) do
 
   create_table "archives", force: :cascade do |t|
     t.string "archive"
@@ -18,6 +18,16 @@ ActiveRecord::Schema.define(version: 20180320001533) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["product_id"], name: "index_archives_on_product_id"
+  end
+
+  create_table "in_shopping_carts", force: :cascade do |t|
+    t.integer "product_id"
+    t.integer "shopping_cart_id"
+    t.integer "amount"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["product_id"], name: "index_in_shopping_carts_on_product_id"
+    t.index ["shopping_cart_id"], name: "index_in_shopping_carts_on_shopping_cart_id"
   end
 
   create_table "my_emails", force: :cascade do |t|
@@ -53,6 +63,13 @@ ActiveRecord::Schema.define(version: 20180320001533) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_products_on_user_id"
+  end
+
+  create_table "shopping_carts", force: :cascade do |t|
+    t.boolean "status"
+    t.string "ip"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|

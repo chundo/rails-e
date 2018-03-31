@@ -31,3 +31,6 @@
 /config/paypal.*
 paypal.rb
 .paypal.rb
+
+/public/uploads/*
+/public/uploads/*.*
